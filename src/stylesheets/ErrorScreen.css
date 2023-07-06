@@ -1,0 +1,11 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    width: min(720px, 90%);
+    padding: 25px;
+    border: solid 1px #dc8;
+    outline: double 4px #dc8;
+    background-color: #fff;
+}
+
+.error-container h1 { text-align: center; }

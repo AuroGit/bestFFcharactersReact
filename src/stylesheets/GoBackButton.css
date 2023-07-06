@@ -1,0 +1,33 @@
+.go-back-btn  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.go-back-btn hr {
+    --color: #888;
+    height: 2px;
+    border: none;
+    background-image: linear-gradient(to right, transparent, var(--color), transparent);
+    transition: background-image .2s;
+}
+.go-back-btn:has( button:hover) hr {
+    --color: #dc8;
+}
+
+.go-back-btn button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    background: none;
+    border: none;
+    font-size: 36px;
+    padding: 20px;
+    cursor: pointer;
+    transition: color .2s;
+}
+.go-back-btn button:hover {
+    color: #dc8;
+}

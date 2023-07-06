@@ -1,0 +1,23 @@
+.preloader-container { display: flex; }
+
+.preloader {
+    --size: 150px;
+    margin: auto;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: solid 8px transparent;
+    border-top: solid 8px #dc8;
+    -webkit-animation: spin 1s infinite linear;
+            animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

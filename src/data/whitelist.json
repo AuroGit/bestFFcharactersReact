@@ -1,0 +1,68 @@
+[
+    {
+        "entrega": "vii",
+        "whitelist": [
+            "Aerith",
+            "Barrett",
+            "Biggs",
+            "Cait Sith",
+            "Cid",
+            "Cloud",
+            "Jessie",
+            "Red XIII",
+            "Sephiroth",
+            "Tifa", 
+            "Vincent",
+            "Wedge",
+            "Yuffie",
+            "Zack"
+        ]
+    },
+    {
+        "entrega": "viii",
+        "whitelist": [
+            "Angelo",
+            "Edea",
+            "Irvine",
+            "Kiros",
+            "Laguna",
+            "Quistis",
+            "Rinoa",
+            "Seifer",
+            "Selphie",
+            "Squall",
+            "Ward",
+            "Zell"
+        ]
+    },
+    {
+        "entrega": "ix",
+        "whitelist": [
+            "Adelbert",
+            "Amarant",
+            "Beatrix",
+            "Blank",
+            "Cinna",
+            "Eiko",
+            "Freya",
+            "Garnet",
+            "Marcus",
+            "Quina",
+            "Vivi",
+            "Zidane"
+        ]
+    },
+    {
+        "entrega": "x",
+        "whitelist": [
+            "Auron",
+            "Kimahri",
+            "Lulu",
+            "Rikku",
+            "Seymour",
+            "Tidus",
+            "Wakka",
+            "Yuna"
+        ]
+    }
+]

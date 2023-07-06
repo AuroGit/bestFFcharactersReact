@@ -1,0 +1,35 @@
+.char-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    padding: 25px;
+    border: solid 1px #dc8;
+    outline: double 4px #dc8;
+    background-color: #fff;
+}
+.char-container * { font-family: 'Oxygen', sans-serif; }
+
+.char-container img {
+    width: min(300px, 100%);
+    border: solid 1px #ccc;
+    margin-inline: auto;
+}
+
+.char-container .data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.data .physic-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.physic-data > * { flex: 1 1 150px; text-align: center; }
+.physic-data span {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+}
