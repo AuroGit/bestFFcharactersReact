@@ -6,19 +6,20 @@ import CharScreen from './routes/CharScreen';
 import ErrorScreen from './routes/ErrorScreen';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+const githubPath = '/bestFFcharactersReact/build';
 const router = createBrowserRouter([
 	{
-		path: '/',
+		path: githubPath + '/',
 		element: <MainScreen />,
 		errorElement: <ErrorScreen />
 	}, 
 	{
-		path: '/team',
+		path: githubPath + '/team',
 		element: <TeamScreen />,
 		errorElement: <ErrorScreen />
 	},
 	{
-		path: '/character',
+		path: githubPath + '/character',
 		element: <CharScreen />,
 		errorElement: <ErrorScreen />
 	}
