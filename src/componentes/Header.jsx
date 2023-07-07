@@ -2,6 +2,7 @@ import React from "react";
 import NavSelector from '../componentes/NavSelector';
 import logo from '../assets/logos/ff-logo.png';
 import '../stylesheets/Header.css';
+import { dynPath } from '../App';
 
 function Header() {
     return (
@@ -10,7 +11,7 @@ function Header() {
 				className='logo' 
 				src={ logo } 
 				alt='Best of FF - logo'
-				onClick={ () => window.location.href = '/' } />
+				onClick={ () => window.location.href = dynPath + '/' } />
             
             <NavSelector />
         </header>

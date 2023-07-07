@@ -1,10 +1,11 @@
 import React from 'react';
 import GameButton from '../componentes/GameButton';
+import { dynPath } from '../App';
 
 function MainScreen() {
 
 	const selectTeam = (num)=> {
-		window.location.href = `/team?num=${num}`;
+		window.location.href = `${dynPath}/team?num=${num}`;
 	};
 
 	return (

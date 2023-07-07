@@ -4,6 +4,7 @@ import Preloader from "../componentes/Preloader";
 import CharacterButton from "../componentes/CharacterButton";
 import GoBackButton from "../componentes/GoBackButton";
 import '../stylesheets/TeamScreen.css';
+import { dynPath } from '../App';
 
 function TeamScreen() {
 
@@ -33,7 +34,7 @@ function TeamScreen() {
             </ul>
          }
 
-         <GoBackButton pageBefore={ '/' } />
+         <GoBackButton pageBefore={ dynPath + '/' } />
       </>
    );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import CharSheet from "../componentes/CharSheet";
 import GoBackButton from "../componentes/GoBackButton";
+import { dynPath } from '../App';
 
 function CharScreen() {
 
@@ -26,7 +27,7 @@ function CharScreen() {
             race={ char[0].race }
             description={ char[0].description } />
          
-         <GoBackButton pageBefore={ '/team' + window.location.search } />
+         <GoBackButton pageBefore={ `${dynPath}/team` + window.location.search } />
       </div>
    );
 }
