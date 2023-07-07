@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bestFFcharactersReact/build/static/css/main.9480d7de.css",
-    "main.js": "/bestFFcharactersReact/build/static/js/main.a33962d4.js",
+    "main.js": "/bestFFcharactersReact/build/static/js/main.18c93105.js",
     "static/media/Laguna.png": "/bestFFcharactersReact/build/static/media/Laguna.0256905570207138e628.png",
     "static/media/final-fantasy-x-logo.png": "/bestFFcharactersReact/build/static/media/final-fantasy-x-logo.7fd3bdbec55728f9b00f.png",
     "static/media/Ward.png": "/bestFFcharactersReact/build/static/media/Ward.225e32e11243e405cfc8.png",
@@ -54,10 +54,10 @@
     "static/media/ff-logo.png": "/bestFFcharactersReact/build/static/media/ff-logo.6775c6527a39fedd43e3.png",
     "index.html": "/bestFFcharactersReact/build/index.html",
     "main.9480d7de.css.map": "/bestFFcharactersReact/build/static/css/main.9480d7de.css.map",
-    "main.a33962d4.js.map": "/bestFFcharactersReact/build/static/js/main.a33962d4.js.map"
+    "main.18c93105.js.map": "/bestFFcharactersReact/build/static/js/main.18c93105.js.map"
   },
   "entrypoints": [
     "static/css/main.9480d7de.css",
-    "static/js/main.a33962d4.js"
+    "static/js/main.18c93105.js"
   ]
 }
