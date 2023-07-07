@@ -4,11 +4,11 @@ import MainScreen from './routes/MainScreen';
 import TeamScreen from './routes/TeamScreen';
 import CharScreen from './routes/CharScreen';
 import ErrorScreen from './routes/ErrorScreen';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 export const dynPath = window.location.hostname === 'localhost' ? 
 	'' : '/bestFFcharactersReact/build';
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: dynPath + '/',
 		element: <MainScreen />,
