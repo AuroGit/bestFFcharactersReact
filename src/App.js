@@ -23,12 +23,11 @@ const router = createHashRouter([
 		element: <CharScreen />,
 		errorElement: <ErrorScreen />
 	}
-])
+]);
 
 function App() {
 	return (
 		<div className="App">
-			{/* <Header /> */}
 			<RouterProvider router={ router } />
 		</div>
 	);
