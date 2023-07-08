@@ -1,5 +1,4 @@
 import './App.css';
-// import Header from './componentes/Header';
 import MainScreen from './routes/MainScreen';
 import TeamScreen from './routes/TeamScreen';
 import CharScreen from './routes/CharScreen';
@@ -7,7 +6,7 @@ import ErrorScreen from './routes/ErrorScreen';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 export const dynPath = window.location.hostname === 'localhost' ? 
-	'' : '/bestFFcharactersReact/build';
+	'' : '/bestFFcharactersReact/build'; console.log(dynPath);
 const router = createHashRouter([
 	{
 		path: dynPath + '/',
