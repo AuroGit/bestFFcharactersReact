@@ -6,7 +6,7 @@ import ErrorScreen from './routes/ErrorScreen';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 export const dynPath = window.location.hostname === 'localhost' ? 
-	'' : '/bestFFcharactersReact/build'; console.log(dynPath);
+	'' : '/bestFFcharactersReact/build';
 const router = createHashRouter([
 	{
 		path: dynPath + '/',
