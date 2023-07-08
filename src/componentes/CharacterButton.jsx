@@ -9,7 +9,7 @@ function CharacterButton({ name, src, id, num }) {
             <img src={ src } alt={ name } />
          </div>
 
-         <a href={`${dynPath}/character?char=${name}&num=${num}`}
+         <a href={`${dynPath}/#/character?char=${name}&num=${num}`}
             className="char-link">
             <h2>{ name }</h2>
          </a>

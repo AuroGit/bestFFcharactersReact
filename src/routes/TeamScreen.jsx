@@ -3,16 +3,18 @@ import useGetData from '../hooks/useGetData';
 import Preloader from "../componentes/Preloader";
 import CharacterButton from "../componentes/CharacterButton";
 import GoBackButton from "../componentes/GoBackButton";
+import Header from "../componentes/Header";
 import '../stylesheets/TeamScreen.css';
 import { dynPath } from '../App';
 
 function TeamScreen() {
 
-   const num = new URLSearchParams(window.location.search).get('num');
+   const num = new URLSearchParams(window.location.hash.split('?')[1]).get('num');
    const {characters, loading} = useGetData(num);
 
    return (
       <>
+         <Header />
          {
             loading ? <Preloader /> :
             <ul className="char-list">

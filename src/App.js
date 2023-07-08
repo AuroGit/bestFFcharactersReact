@@ -1,26 +1,26 @@
 import './App.css';
-import Header from './componentes/Header';
+// import Header from './componentes/Header';
 import MainScreen from './routes/MainScreen';
 import TeamScreen from './routes/TeamScreen';
 import CharScreen from './routes/CharScreen';
 import ErrorScreen from './routes/ErrorScreen';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 export const dynPath = window.location.hostname === 'localhost' ? 
 	'' : '/bestFFcharactersReact/build';
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: dynPath + '/',
 		element: <MainScreen />,
-		errorElement: <ErrorScreen />
-	}, 
+		errorElement: <ErrorScreen />,
+	},
 	{
-		path: dynPath + '/team',
+		path: dynPath + 'team',
 		element: <TeamScreen />,
 		errorElement: <ErrorScreen />
 	},
 	{
-		path: dynPath + '/character',
+		path: dynPath + 'character',
 		element: <CharScreen />,
 		errorElement: <ErrorScreen />
 	}
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
 function App() {
 	return (
 		<div className="App">
-			<Header />
+			{/* <Header /> */}
 			<RouterProvider router={ router } />
 		</div>
 	);
