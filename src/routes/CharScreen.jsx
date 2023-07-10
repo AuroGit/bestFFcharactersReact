@@ -2,7 +2,7 @@ import React from "react";
 import CharSheet from "../componentes/CharSheet";
 import GoBackButton from "../componentes/GoBackButton";
 import Header from "../componentes/Header";
-import { dynPath } from '../App';
+// import { dynPath } from '../index';
 
 function CharScreen() {
 
@@ -30,7 +30,10 @@ function CharScreen() {
                race={ char[0].race }
                description={ char[0].description } />
             
-            <GoBackButton pageBefore={ `${dynPath}/#/team?` + window.location.hash.split('?')[1] } />
+            <GoBackButton pageBefore={
+               `${window.location.pathname}#/team?` + window.location.hash.split('?')[1]
+               } 
+            />
          </div>
       </>
    );

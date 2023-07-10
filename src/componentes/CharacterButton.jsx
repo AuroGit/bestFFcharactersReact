@@ -1,6 +1,6 @@
 import React from "react";
 import '../stylesheets/CharacterButton.css';
-import { dynPath } from '../App';
+// import { dynPath } from '../index';
 
 function CharacterButton({ name, src, id, num }) {
    return (
@@ -9,7 +9,8 @@ function CharacterButton({ name, src, id, num }) {
             <img src={ src } alt={ name } />
          </div>
 
-         <a href={`${dynPath}/#/character?char=${name}&num=${num}`}
+         <a 
+            href={`${window.location.pathname}/#/character?char=${name}&num=${num}`}
             className="char-link">
             <h2>{ name }</h2>
          </a>

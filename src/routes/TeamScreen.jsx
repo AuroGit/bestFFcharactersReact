@@ -5,12 +5,12 @@ import CharacterButton from "../componentes/CharacterButton";
 import GoBackButton from "../componentes/GoBackButton";
 import Header from "../componentes/Header";
 import '../stylesheets/TeamScreen.css';
-import { dynPath } from '../App';
+// import { dynPath } from '../index';
 
 function TeamScreen() {
 
    const num = new URLSearchParams(window.location.hash.split('?')[1]).get('num');
-   const {characters, loading} = useGetData(num);
+   const { characters, loading } = useGetData(num);
 
    return (
       <>
@@ -36,7 +36,8 @@ function TeamScreen() {
             </ul>
          }
 
-         <GoBackButton pageBefore={ dynPath + '/' } />
+         <GoBackButton pageBefore={ window.location.pathname } 
+         />
       </>
    );
 }

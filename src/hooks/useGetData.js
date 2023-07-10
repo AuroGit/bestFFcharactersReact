@@ -3,7 +3,7 @@ import whitelist from '../data/whitelist.json';
 
 const url = 'https://www.moogleapi.com/api/v1/characters/search?origin=';
 
-const useGetData = (search)=> {console.log(search);
+const useGetData = (search)=> {
 	const [loading, setLoading] = useState(false);
 	const [characters, setCharacters] = useState(null);
 
