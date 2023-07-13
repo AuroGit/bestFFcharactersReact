@@ -6,7 +6,7 @@ import Header from '../componentes/Header';
 function MainScreen() {
 
 	const selectTeam = (num)=> {
-		window.location.href = `${window.location.pathname}#/team?num=${num}`;
+		window.location.href = `/team?num=${num}`;
 	};
 
 	return (

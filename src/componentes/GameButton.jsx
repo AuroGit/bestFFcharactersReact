@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../stylesheets/GameButton.css';
 
 function GameButton({ handleClick, num }) {
@@ -9,8 +10,10 @@ function GameButton({ handleClick, num }) {
             src={ require(`../assets/logos/final-fantasy-${num}-logo.png`) }
             alt={ `Final Fantasy ${num} Logo` } />
          <hr className="separador" />
-         <button onClick={() => handleClick(num)}>
-            VER PERSONAJES
+         <button>
+            <Link to='/team'>
+               VER PERSONAJES
+            </Link>
          </button>
       </div>
    );
