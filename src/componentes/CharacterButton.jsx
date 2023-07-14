@@ -1,19 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../stylesheets/CharacterButton.css';
-// import { dynPath } from '../index';
 
-function CharacterButton({ name, src, id, num }) {
+function CharacterButton({ name, src, id, game }) {
    return (
       <li id={ id } className="char" key={ id }>
          <div className="char-img">
             <img src={ src } alt={ name } />
          </div>
 
-         <a 
-            href={`${window.location.pathname}/#/character?char=${name}&num=${num}`}
+         <Link 
+            to={`/character/${game}/${name}`}
             className="char-link">
             <h2>{ name }</h2>
-         </a>
+         </Link>
       </li>
    );
 }

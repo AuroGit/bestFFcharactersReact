@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../stylesheets/GoBackButton.css';
 
-function GoBackButton(/* { pageBefore } */) {
+function GoBackButton( { pageBefore } ) {
     return (
         <div className="go-back-btn">
             <hr className="separador"/>
-            <button>
+            <Link className="button" to={ pageBefore }>
                 Volver
-            </button>
+            </Link>
         </div>
     );
 }

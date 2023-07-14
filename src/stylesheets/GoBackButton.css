@@ -12,22 +12,22 @@
     background-image: linear-gradient(to right, transparent, var(--color), transparent);
     transition: background-image .2s;
 }
-.go-back-btn:has( button:hover) hr {
-    --color: #dc8;
-}
+.go-back-btn:has( .button:hover) hr,
+.go-back-btn .button:hover { --color: #dc8; }
 
-.go-back-btn button {
+.go-back-btn .button {
+    --color: #000;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin: auto;
+    font-family: 'Instrument serif', serif;
+    font-size: 36px;
+    text-decoration: none;
+    color: var(--color);
     background: none;
     border: none;
-    font-size: 36px;
     padding: 20px;
     cursor: pointer;
     transition: color .2s;
-}
-.go-back-btn button:hover {
-    color: #dc8;
 }

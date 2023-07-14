@@ -2,19 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../stylesheets/GameButton.css';
 
-function GameButton({ handleClick, num }) {
+function GameButton({ game }) {
    
    return (
       <div className="game-btn">
          <img 
-            src={ require(`../assets/logos/final-fantasy-${num}-logo.png`) }
-            alt={ `Final Fantasy ${num} Logo` } />
+            src={ require(`../assets/logos/final-fantasy-${game}-logo.png`) }
+            alt={ `Final Fantasy ${game} Logo` } />
          <hr className="separador" />
-         <button>
-            <Link to='/team'>
-               VER PERSONAJES
-            </Link>
-         </button>
+         
+         <Link className="button" to={`/team/${game}`}>
+            VER PERSONAJES
+         </Link>
       </div>
    );
 }

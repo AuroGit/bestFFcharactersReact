@@ -1,42 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import CharSheet from "../componentes/CharSheet";
 import GoBackButton from "../componentes/GoBackButton";
 import Header from "../componentes/Header";
 
 function CharScreen() {
 
-   // const num = new URLSearchParams(window.location.hash.split('?')[1]).get('num');
-   // const charName = new URLSearchParams(window.location.hash.split('?')[1]).get('char');
+   const { game, char } = useParams();
 
-   // const charsArr = JSON.parse(sessionStorage.getItem(`ff${num}-chars`));
-   // const char = charsArr.filter(char => char.name === charName);
+   const charDatassArr = JSON.parse(sessionStorage.getItem(`ff${game}-chars`));
+   const charData = charDatassArr.filter((item) => item.name === char).pop();
 
    return (
       <>
          <Header />
-         <h1>Character</h1>
-         <Link to='/'>Ir a Home</Link>
-         {/* <div className="container">
-            <h1>{ char[0].name } - FF{ num.toUpperCase() }</h1>
+
+         <div className="container">
+            <h1>{ char } - FF{ game.toUpperCase() }</h1>
 
             <CharSheet
-               name={ char[0].name }
+               name={ char }
                image={ require('../assets/characters/' + 
-                  num + '/' + char[0].name.replace(' ', '-') + '.png')
+                  game + '/' + char.replace(' ', '-') + '.png')
                   || 
-                  char[0].pictures[0].url }
-               age={ char[0].age }
-               gender={ char[0].gender }
-               height={ char[0].height }
-               race={ char[0].race }
-               description={ char[0].description } />
+                  charData.pictures[0].url }
+               age={ charData.age }
+               gender={ charData.gender }
+               height={ charData.height }
+               race={ charData.race }
+               description={ charData.description } />
             
-            <GoBackButton pageBefore={
-               `${window.location.pathname}#/team?` + window.location.hash.split('?')[1]
-               } 
-            />
-         </div> */}
+            <GoBackButton pageBefore={ `/team/${game}` } />
+         </div>
       </>
    );
 }

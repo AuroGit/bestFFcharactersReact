@@ -12,21 +12,21 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<HashRouter>
-				<Routes>
-					<Route 
-						exact path='/'
-						element={ <MainScreen /> }
-					errorElement={ <ErrorScreen /> } />
-					<Route 
-						exact path='/team'
-						element={ <TeamScreen /> }
+			<Routes>
+				<Route 
+					exact path='/'
+					element={ <MainScreen /> }
 					errorElement={ <ErrorScreen /> } />
 				<Route 
-						exact path='/character'
-						element={ <CharScreen /> }
+					exact path='/team/:game'
+					element={ <TeamScreen /> }
 					errorElement={ <ErrorScreen /> } />
-				</Routes>
-			</HashRouter>
+				<Route 
+					exact path='/character/:game/:char'
+					element={ <CharScreen /> }
+					errorElement={ <ErrorScreen /> } />
+			</Routes>
+		</HashRouter>
 	</React.StrictMode>
 );
 
