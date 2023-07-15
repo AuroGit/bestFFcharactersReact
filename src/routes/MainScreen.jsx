@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GameButton from '../componentes/GameButton';
 import Header from '../componentes/Header';
 
 function MainScreen() {
+
+	useEffect(() => window.scrollTo(0, 0), []);
 
 	return (
 		<>

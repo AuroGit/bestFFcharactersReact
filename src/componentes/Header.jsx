@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import NavSelector from '../componentes/NavSelector';
+import NavSelector from '../componentes/NavSelector';
 import logo from '../assets/logos/ff-logo.png';
 import '../stylesheets/Header.css';
 
@@ -15,7 +15,7 @@ function Header() {
                 />
             </Link>
             
-            {/* <NavSelector /> */}
+            <NavSelector />
         </header>
     );
 }

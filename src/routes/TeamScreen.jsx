@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useGetData from '../hooks/useGetData';
 
@@ -13,11 +13,15 @@ function TeamScreen() {
    const { game } = useParams();
    const { characters, loading } = useGetData(game);
 
+   // useEffect(() => {}, [game]);
+
+   useEffect(() => window.scrollTo(0, 0), []);
+
    return (
       <>
          <Header />
          {
-            loading ? <Preloader /> :
+            loading ? <Preloader /> : 
             <ul className="char-list">
                {
                   characters?.map((item, index) => {
@@ -30,7 +34,8 @@ function TeamScreen() {
                            src={ require('../assets/characters/' + 
                               game + '/' + item.name.replace(' ', '-') + '.png')
                               || 
-                              item.pictures[0].url } />
+                              item.pictures[0].url }
+                        />
                      );
                   })
                }

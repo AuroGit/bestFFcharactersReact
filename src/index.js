@@ -7,6 +7,7 @@ import MainScreen from './routes/MainScreen';
 import TeamScreen from './routes/TeamScreen';
 import CharScreen from './routes/CharScreen';
 import ErrorScreen from './routes/ErrorScreen';
+import Reload from './routes/Reload';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,10 @@ root.render(
 				<Route 
 					exact path='/character/:game/:char'
 					element={ <CharScreen /> }
+					errorElement={ <ErrorScreen /> } />
+				<Route 
+					exact path='/reload/:game'
+					element={ <Reload /> }
 					errorElement={ <ErrorScreen /> } />
 			</Routes>
 		</HashRouter>

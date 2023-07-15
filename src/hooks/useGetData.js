@@ -4,30 +4,39 @@ import whitelist from '../data/whitelist.json';
 const url = 'https://www.moogleapi.com/api/v1/characters/search?origin=';
 
 const useGetData = (search)=> {
+	console.log('Cargando FF' + search.toUpperCase());
+
 	const [loading, setLoading] = useState(false);
 	const [characters, setCharacters] = useState(null);
-
-	console.log('Cargando FF' + search.toUpperCase());
 
 	useEffect(()=> {
 		setLoading(true);
 
-		if (sessionStorage.getItem(`ff${search}-chars`)) {
-			setCharacters(JSON.parse(sessionStorage.getItem(`ff${search}-chars`)));
-			setLoading(false);
-			console.log("Cargados desde SessionStorage");
-		} else {
+		// if (sessionStorage.getItem(`ff${search}-chars`)) {
+		// 	setCharacters(JSON.parse(sessionStorage.getItem(`ff${search}-chars`)));
+		// 	setLoading(false);
+		// 	console.log("Cargados desde SessionStorage");
+		// } else {
 			let item = whitelist.filter(item => item.entrega === search);
 		
 			fetch(url + search).then(res => res.json()).then(data => {
 				let finalData = data.filter(dataItem => 
-					item[0].whitelist.join().includes(dataItem.name))
+					item[0].whitelist.join().includes(dataItem.name));
+
+					// Sustituir src's
+					// finalData.forEach(elem => {
+					// 	elem.pictures[0].url = '../assets/characters/' + 
+					// 	search + '/' + elem.name.replace(' ', '-') 
+					// 	+ '.png';
+					// });
+
 					setCharacters(finalData);
 					sessionStorage.setItem(`ff${search}-chars`, JSON.stringify(finalData));
 					console.log("Cargados desde Moogle API");
 			}).catch(err=>console.log(err)).finally(() => setLoading(false));
 		}
-	}, [search]);
+	//}
+	, [search]);
 
 	return {characters, loading};
 };
