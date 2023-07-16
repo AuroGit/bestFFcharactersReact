@@ -30,8 +30,9 @@ function NavSelector() {
 	const charsArr = JSON.parse(sessionStorage.getItem(`ff${game}-chars`));
 
 	const handleDropdown = ()=> setDropdown(!dropdown);
+	useEffect(() => setDropdown(false), [char]);
 
-	useEffect(() =>  {
+	useEffect(() => {
 		if (pathname.includes('team')) setSelected(`Final Fantasy ${game.toUpperCase()}`);
 		if (pathname.includes('character')) setSelected(char);
 	}, [game, char, pathname]);
