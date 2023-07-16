@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CharSheet from "../componentes/CharSheet";
 import GoBackButton from "../componentes/GoBackButton";
@@ -10,6 +10,8 @@ function CharScreen() {
 
    const charDatassArr = JSON.parse(sessionStorage.getItem(`ff${game}-chars`));
    const charData = charDatassArr.filter((item) => item.name === char).pop();
+
+   useEffect(() => window.scrollTo(0, 0), [char]);
 
    return (
       <>

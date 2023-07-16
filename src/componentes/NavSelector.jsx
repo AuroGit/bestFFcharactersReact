@@ -29,7 +29,7 @@ function NavSelector() {
 	const dropdownRef = useRef(null);
 	const charsArr = JSON.parse(sessionStorage.getItem(`ff${game}-chars`));
 
-	const handleDropdown = ()=> setDropdown(true);
+	const handleDropdown = ()=> setDropdown(!dropdown);
 
 	useEffect(() =>  {
 		if (pathname.includes('team')) setSelected(`Final Fantasy ${game.toUpperCase()}`);
@@ -39,9 +39,9 @@ function NavSelector() {
 	if (pathname !== '/') {
 		return (
 			<div className="nav-container"
-				ref={ selectRef }
-				onClick={ handleDropdown }>
-				<div className="select" >
+				ref={ selectRef }>
+				<div className="select" 
+					onClick={ handleDropdown }>
 					<span className="value">
 						{ selected }
 					</span>

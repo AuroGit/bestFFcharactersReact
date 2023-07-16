@@ -13,8 +13,6 @@ function TeamScreen() {
    const { game } = useParams();
    const { characters, loading } = useGetData(game);
 
-   // useEffect(() => {}, [game]);
-
    useEffect(() => window.scrollTo(0, 0), []);
 
    return (
